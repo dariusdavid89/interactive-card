@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<main class="card-container">
+			<div class="left-content">
+				<div class="front-card">
+					<img class="card-logo" src="images/card-logo.svg" alt="card-logo" />
+					<div class="card-details">
+						<span class="front-number">0000 0000 0000 0000</span>
+						<div class="card-name-date">
+							<span class="name">Jane Appleseed</span>
+							<div class="date">
+								<span class="month">00</span> / <span class="year">00</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="back-card">
+					<div class="back-number">000</div>
+				</div>
+			</div>
+			<div class="right-content">
+				<form class="form">
+					<label for="input-name">CARDHOLDER NAME</label>
+					<input
+						class="input-name"
+						id="input-name"
+						required
+						minlength="2"
+						maxlength="32"
+						placeholder="e.g Jane Appleseed"
+						type="text"
+					/>
+					<p class="error-message name-error"></p>
+
+					<label for="input-card-number">CARD NUMBER</label>
+					<input
+						id="input-card-number"
+						class="input-card-number"
+						required
+						placeholder="e.g 1234 5678 9123 0000"
+						type="text"
+					/>
+					<p class="error-message number-error"></p>
+
+					<div class="input-group">
+						<div class="month-section">
+							<label for="input-month-year">EXP.DATE (MM/YY)</label>
+							<div class="month-year-div">
+								<input
+									id="input-month-year"
+									class="input-month"
+									required
+									placeholder="MM"
+									type="text"
+									minlength="2"
+									maxlength="2"
+								/>
+								<input
+									id="input-month-year"
+									class="input-year"
+									required
+									placeholder="YY"
+									type="text"
+									minlength="2"
+									maxlength="2"
+								/>
+							</div>
+						</div>
+						<div class="cvc-section">
+							<label for="input-cvc">CVC</label>
+							<input
+								id="input-cvc"
+								class="input-cvc"
+								required
+								placeholder="e.g 123"
+								type="text"
+								minlength="3"
+								maxlength="3"
+							/>
+							<p class="error-message cvc-error"></p>
+						</div>
+					</div>
+					<p class="error-message date-error"></p>
+
+					<button class="btn" type="submit" id="btn-confirm">Confirm</button>
+				</form>
+			</div>
+			<div class="form-completed hidden">
+				<div>
+					<img
+						class="icon-completed"
+						src="images/icon-complete.svg"
+						alt="icon-complited"
+					/>
+				</div>
+				<span class="thank">Thank You!</span>
+				<span class="added">We've added your card details</span>
+				<button type="submit" class="btn" id="btn-continue">Continue</button>
+			</div>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
