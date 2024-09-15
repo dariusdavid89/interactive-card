@@ -285,6 +285,10 @@ input::placeholder {
 		margin: 7rem auto;
 		max-width: 350px;
 	}
+
+	label {
+		font-size: 12px;
+	}
 }
 
 @media (max-width: 364px) {

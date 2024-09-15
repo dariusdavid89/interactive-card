@@ -85,7 +85,6 @@ function validateMonthYearFun(e) {
 	inputMonth.value = inputMonth.value
 		? Math.min(12, Math.max(1, inputMonth.value)).toString().padStart(2, "0")
 		: "";
-	cardMonth.textContent = e.target.value;
 	if (e.target.value == "") {
 		dateError.textContent = "Can't be blank";
 	} else if (e.target.value.length !== 2) {
